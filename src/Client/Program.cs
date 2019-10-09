@@ -25,11 +25,13 @@ namespace Client
                 return string.Empty;
             }
 
-            var tokenResponse = await client.RequestClientCredentialsTokenAsync(new ClientCredentialsTokenRequest
+            var tokenResponse = await client.RequestPasswordTokenAsync(new PasswordTokenRequest
             {
                 Address = disco.TokenEndpoint,
-                ClientId = "client",
+                ClientId = "varcal.client",
                 ClientSecret = "secret",
+                UserName = "cleber",
+                Password = "123456",
                 Scope = "apiVarcal"
             });
 
