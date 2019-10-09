@@ -19,12 +19,27 @@ namespace IdentityServer
 
         public static IEnumerable<ApiResource> GetApis()
         {
-            return new ApiResource[] { };
+            return new ApiResource[]
+            {
+                new ApiResource("apiVarcal", "My Api Varçal") 
+            };
         }
 
         public static IEnumerable<Client> GetClients()
         {
-            return new Client[] { };
+            return new Client[]
+            {
+                new Client
+                {
+                    ClientId = "client",
+                    AllowedGrantTypes = GrantTypes.ClientCredentials,
+                    ClientSecrets =
+                    {
+                        new Secret("secret".Sha256())
+                    },
+                    AllowedScopes = {"apiVarcal"}
+                } 
+            };
         }
     }
 }

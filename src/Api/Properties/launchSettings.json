@@ -1,0 +1,18 @@
+{
+  "Api": {
+    "commandName": "Project",
+    "launchBrowser": true,
+    "environmentVariables": {
+      "ASPNETCORE_ENVIRONMENT": "Development"
+    },
+    "applicationUrl": "http://localhost:5001"
+  },
+  "profiles": {
+    "Api": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "http://localhost:5001/identity",
+      "applicationUrl": "http://localhost:5001"
+    }
+  }
+}
